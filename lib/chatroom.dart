@@ -29,10 +29,10 @@ class _chatroom_pageState extends State<chatroom_page> {
       body: SingleChildScrollView(
         child: Column(crossAxisAlignment: CrossAxisAlignment.start,
           children: [Padding(
-            padding: const EdgeInsets.all(18.0),
+            padding: const EdgeInsets.all(15.0),
             child: Text("Chat Room",style: TextStyle(fontWeight: FontWeight.w800,fontSize: 36)),
           ),
-            SizedBox(height:MediaQuery.of(context).size.height*0.72,
+            SizedBox(height:MediaQuery.of(context).size.height*0.738,
               child: SingleChildScrollView(physics: AlwaysScrollableScrollPhysics(),
                 child:
                 Column(
@@ -44,7 +44,7 @@ class _chatroom_pageState extends State<chatroom_page> {
                         itemBuilder:(BuildContext context,int index)
                         {
                           return Padding(
-                            padding: const EdgeInsets.all(6.0),
+                            padding: const EdgeInsets.all(5.0),
                             child: Card(shape:RoundedRectangleBorder(borderRadius:BorderRadius.circular(25)),child:
                             Padding(
                               padding: const EdgeInsets.all(18.0),
@@ -57,11 +57,14 @@ class _chatroom_pageState extends State<chatroom_page> {
                                 ],),)),
                           );}),],),),),
             Padding(
-              padding: const EdgeInsets.all(9.0),
-              child: Card(
-                child: Row(children: [
-                  SizedBox(width: MediaQuery.of(context).size.width*0.80,child: TextFormField(controller: message_controller,)),IconButton(onPressed: (){}, icon:Icon(Icons.send_rounded))
-                ],),
+              padding: const EdgeInsets.all(6.0),
+              child: Card(shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(25)),
+                child: Padding(
+                  padding: const EdgeInsets.all(5.0),
+                  child: Row(mainAxisAlignment: MainAxisAlignment.spaceAround,children: [
+                    SizedBox(width: MediaQuery.of(context).size.width*0.74,child: TextFormField(controller: message_controller,)),IconButton(onPressed: (){}, color: Colors.blueAccent,icon:Icon(Icons.send_rounded))
+                  ],),
+                ),
               ),
             )
           ],
