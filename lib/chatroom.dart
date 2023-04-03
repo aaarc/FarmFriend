@@ -62,7 +62,7 @@ class _chatroom_pageState extends State<chatroom_page> {
                 child: Padding(
                   padding: const EdgeInsets.all(5.0),
                   child: Row(mainAxisAlignment: MainAxisAlignment.spaceAround,children: [
-                    SizedBox(width: MediaQuery.of(context).size.width*0.74,child: TextFormField(controller: message_controller,)),IconButton(onPressed: (){}, color: Colors.blueAccent,icon:Icon(Icons.send_rounded))
+                    SizedBox(width: MediaQuery.of(context).size.width*0.74,child: TextFormField(controller: message_controller,)),IconButton(onPressed: (){print(message_controller.text);}, color: Colors.blueAccent,icon:Icon(Icons.send_rounded))
                   ],),
                 ),
               ),
